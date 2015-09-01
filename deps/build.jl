@@ -4,14 +4,14 @@ using BinDeps
 version = "4.25.1"
 url = "ftp://ftp.atnf.csiro.au/pub/software/wcslib/wcslib-$version.tar.bz2"
 
-wcs = library_dependency("libwcs")
+wcs = library_dependency("libwcs", aliases=["libwcs","libwcs.4"])
 provides(Sources, URI(url), wcs, unpacked_dir="wcslib-$version")
 depsdir = BinDeps.depsdir(wcs)
 builddir = joinpath(depsdir, "src/wcslib-$version")
 prefix = joinpath(depsdir, "usr")
 configopts = ["--disable-fortran", "--without-cfitsio", "--without-pgplot"]
 @unix_only libfilename = "libwcs.so.$version"
-@osx_only libfilename = "libwcs.dylib"
+@osx_only libfilename = "libwcs.$version.dylib"
 provides(BuildProcess,
          (@build_steps begin
             GetSources(wcs)
