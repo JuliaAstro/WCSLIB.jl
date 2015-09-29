@@ -53,7 +53,7 @@ end
 
 function convert(::Type{Array_72_Uint8}, s::ASCIIString)
     @assert length(s) < 72
-    v = zeros(@compat(UInt8), 72)
+    v = zeros(UInt8, 72)
     for i = 1:length(s)
         v[i] = s[i]
     end
@@ -231,7 +231,7 @@ end
 
 function wcshdo(w::wcsprm; relax::Integer=0)
     nkeyrec = Cint[0]
-    header = Ptr{@compat(UInt8)}[0]
+    header = Ptr{UInt8}[0]
     stat = wcshdo(relax, w, pointer(nkeyrec), pointer(header))
     @assert stat == 0
     p = header[1]

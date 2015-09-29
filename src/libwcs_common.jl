@@ -50,176 +50,176 @@ const WCSHDO_CRPXna = 0x08
 const WCSHDO_CNAMna = 0x10
 const WCSHDO_WCSNna = 0x20
 immutable Array_160_Uint8
-    d1::@compat(UInt8)
-    d2::@compat(UInt8)
-    d3::@compat(UInt8)
-    d4::@compat(UInt8)
-    d5::@compat(UInt8)
-    d6::@compat(UInt8)
-    d7::@compat(UInt8)
-    d8::@compat(UInt8)
-    d9::@compat(UInt8)
-    d10::@compat(UInt8)
-    d11::@compat(UInt8)
-    d12::@compat(UInt8)
-    d13::@compat(UInt8)
-    d14::@compat(UInt8)
-    d15::@compat(UInt8)
-    d16::@compat(UInt8)
-    d17::@compat(UInt8)
-    d18::@compat(UInt8)
-    d19::@compat(UInt8)
-    d20::@compat(UInt8)
-    d21::@compat(UInt8)
-    d22::@compat(UInt8)
-    d23::@compat(UInt8)
-    d24::@compat(UInt8)
-    d25::@compat(UInt8)
-    d26::@compat(UInt8)
-    d27::@compat(UInt8)
-    d28::@compat(UInt8)
-    d29::@compat(UInt8)
-    d30::@compat(UInt8)
-    d31::@compat(UInt8)
-    d32::@compat(UInt8)
-    d33::@compat(UInt8)
-    d34::@compat(UInt8)
-    d35::@compat(UInt8)
-    d36::@compat(UInt8)
-    d37::@compat(UInt8)
-    d38::@compat(UInt8)
-    d39::@compat(UInt8)
-    d40::@compat(UInt8)
-    d41::@compat(UInt8)
-    d42::@compat(UInt8)
-    d43::@compat(UInt8)
-    d44::@compat(UInt8)
-    d45::@compat(UInt8)
-    d46::@compat(UInt8)
-    d47::@compat(UInt8)
-    d48::@compat(UInt8)
-    d49::@compat(UInt8)
-    d50::@compat(UInt8)
-    d51::@compat(UInt8)
-    d52::@compat(UInt8)
-    d53::@compat(UInt8)
-    d54::@compat(UInt8)
-    d55::@compat(UInt8)
-    d56::@compat(UInt8)
-    d57::@compat(UInt8)
-    d58::@compat(UInt8)
-    d59::@compat(UInt8)
-    d60::@compat(UInt8)
-    d61::@compat(UInt8)
-    d62::@compat(UInt8)
-    d63::@compat(UInt8)
-    d64::@compat(UInt8)
-    d65::@compat(UInt8)
-    d66::@compat(UInt8)
-    d67::@compat(UInt8)
-    d68::@compat(UInt8)
-    d69::@compat(UInt8)
-    d70::@compat(UInt8)
-    d71::@compat(UInt8)
-    d72::@compat(UInt8)
-    d73::@compat(UInt8)
-    d74::@compat(UInt8)
-    d75::@compat(UInt8)
-    d76::@compat(UInt8)
-    d77::@compat(UInt8)
-    d78::@compat(UInt8)
-    d79::@compat(UInt8)
-    d80::@compat(UInt8)
-    d81::@compat(UInt8)
-    d82::@compat(UInt8)
-    d83::@compat(UInt8)
-    d84::@compat(UInt8)
-    d85::@compat(UInt8)
-    d86::@compat(UInt8)
-    d87::@compat(UInt8)
-    d88::@compat(UInt8)
-    d89::@compat(UInt8)
-    d90::@compat(UInt8)
-    d91::@compat(UInt8)
-    d92::@compat(UInt8)
-    d93::@compat(UInt8)
-    d94::@compat(UInt8)
-    d95::@compat(UInt8)
-    d96::@compat(UInt8)
-    d97::@compat(UInt8)
-    d98::@compat(UInt8)
-    d99::@compat(UInt8)
-    d100::@compat(UInt8)
-    d101::@compat(UInt8)
-    d102::@compat(UInt8)
-    d103::@compat(UInt8)
-    d104::@compat(UInt8)
-    d105::@compat(UInt8)
-    d106::@compat(UInt8)
-    d107::@compat(UInt8)
-    d108::@compat(UInt8)
-    d109::@compat(UInt8)
-    d110::@compat(UInt8)
-    d111::@compat(UInt8)
-    d112::@compat(UInt8)
-    d113::@compat(UInt8)
-    d114::@compat(UInt8)
-    d115::@compat(UInt8)
-    d116::@compat(UInt8)
-    d117::@compat(UInt8)
-    d118::@compat(UInt8)
-    d119::@compat(UInt8)
-    d120::@compat(UInt8)
-    d121::@compat(UInt8)
-    d122::@compat(UInt8)
-    d123::@compat(UInt8)
-    d124::@compat(UInt8)
-    d125::@compat(UInt8)
-    d126::@compat(UInt8)
-    d127::@compat(UInt8)
-    d128::@compat(UInt8)
-    d129::@compat(UInt8)
-    d130::@compat(UInt8)
-    d131::@compat(UInt8)
-    d132::@compat(UInt8)
-    d133::@compat(UInt8)
-    d134::@compat(UInt8)
-    d135::@compat(UInt8)
-    d136::@compat(UInt8)
-    d137::@compat(UInt8)
-    d138::@compat(UInt8)
-    d139::@compat(UInt8)
-    d140::@compat(UInt8)
-    d141::@compat(UInt8)
-    d142::@compat(UInt8)
-    d143::@compat(UInt8)
-    d144::@compat(UInt8)
-    d145::@compat(UInt8)
-    d146::@compat(UInt8)
-    d147::@compat(UInt8)
-    d148::@compat(UInt8)
-    d149::@compat(UInt8)
-    d150::@compat(UInt8)
-    d151::@compat(UInt8)
-    d152::@compat(UInt8)
-    d153::@compat(UInt8)
-    d154::@compat(UInt8)
-    d155::@compat(UInt8)
-    d156::@compat(UInt8)
-    d157::@compat(UInt8)
-    d158::@compat(UInt8)
-    d159::@compat(UInt8)
-    d160::@compat(UInt8)
+    d1::UInt8
+    d2::UInt8
+    d3::UInt8
+    d4::UInt8
+    d5::UInt8
+    d6::UInt8
+    d7::UInt8
+    d8::UInt8
+    d9::UInt8
+    d10::UInt8
+    d11::UInt8
+    d12::UInt8
+    d13::UInt8
+    d14::UInt8
+    d15::UInt8
+    d16::UInt8
+    d17::UInt8
+    d18::UInt8
+    d19::UInt8
+    d20::UInt8
+    d21::UInt8
+    d22::UInt8
+    d23::UInt8
+    d24::UInt8
+    d25::UInt8
+    d26::UInt8
+    d27::UInt8
+    d28::UInt8
+    d29::UInt8
+    d30::UInt8
+    d31::UInt8
+    d32::UInt8
+    d33::UInt8
+    d34::UInt8
+    d35::UInt8
+    d36::UInt8
+    d37::UInt8
+    d38::UInt8
+    d39::UInt8
+    d40::UInt8
+    d41::UInt8
+    d42::UInt8
+    d43::UInt8
+    d44::UInt8
+    d45::UInt8
+    d46::UInt8
+    d47::UInt8
+    d48::UInt8
+    d49::UInt8
+    d50::UInt8
+    d51::UInt8
+    d52::UInt8
+    d53::UInt8
+    d54::UInt8
+    d55::UInt8
+    d56::UInt8
+    d57::UInt8
+    d58::UInt8
+    d59::UInt8
+    d60::UInt8
+    d61::UInt8
+    d62::UInt8
+    d63::UInt8
+    d64::UInt8
+    d65::UInt8
+    d66::UInt8
+    d67::UInt8
+    d68::UInt8
+    d69::UInt8
+    d70::UInt8
+    d71::UInt8
+    d72::UInt8
+    d73::UInt8
+    d74::UInt8
+    d75::UInt8
+    d76::UInt8
+    d77::UInt8
+    d78::UInt8
+    d79::UInt8
+    d80::UInt8
+    d81::UInt8
+    d82::UInt8
+    d83::UInt8
+    d84::UInt8
+    d85::UInt8
+    d86::UInt8
+    d87::UInt8
+    d88::UInt8
+    d89::UInt8
+    d90::UInt8
+    d91::UInt8
+    d92::UInt8
+    d93::UInt8
+    d94::UInt8
+    d95::UInt8
+    d96::UInt8
+    d97::UInt8
+    d98::UInt8
+    d99::UInt8
+    d100::UInt8
+    d101::UInt8
+    d102::UInt8
+    d103::UInt8
+    d104::UInt8
+    d105::UInt8
+    d106::UInt8
+    d107::UInt8
+    d108::UInt8
+    d109::UInt8
+    d110::UInt8
+    d111::UInt8
+    d112::UInt8
+    d113::UInt8
+    d114::UInt8
+    d115::UInt8
+    d116::UInt8
+    d117::UInt8
+    d118::UInt8
+    d119::UInt8
+    d120::UInt8
+    d121::UInt8
+    d122::UInt8
+    d123::UInt8
+    d124::UInt8
+    d125::UInt8
+    d126::UInt8
+    d127::UInt8
+    d128::UInt8
+    d129::UInt8
+    d130::UInt8
+    d131::UInt8
+    d132::UInt8
+    d133::UInt8
+    d134::UInt8
+    d135::UInt8
+    d136::UInt8
+    d137::UInt8
+    d138::UInt8
+    d139::UInt8
+    d140::UInt8
+    d141::UInt8
+    d142::UInt8
+    d143::UInt8
+    d144::UInt8
+    d145::UInt8
+    d146::UInt8
+    d147::UInt8
+    d148::UInt8
+    d149::UInt8
+    d150::UInt8
+    d151::UInt8
+    d152::UInt8
+    d153::UInt8
+    d154::UInt8
+    d155::UInt8
+    d156::UInt8
+    d157::UInt8
+    d158::UInt8
+    d159::UInt8
+    d160::UInt8
 end
 immutable wcserr
     status::Cint
     line_no::Cint
-    _function::Ptr{@compat(UInt8)}
-    file::Ptr{@compat(UInt8)}
+    _function::Ptr{UInt8}
+    file::Ptr{UInt8}
     msg::Array_160_Uint8
 end
 # begin enum lin_errmsg_enum
-typealias lin_errmsg_enum @compat(UInt32)
+typealias lin_errmsg_enum UInt32
 const LINERR_SUCCESS = 0
 const LINERR_NULL_POINTER = 1
 const LINERR_MEMORY = 2
@@ -246,7 +246,7 @@ immutable linprm
     padding2::Ptr{Void}
 end
 # begin enum prj_errmsg_enum
-typealias prj_errmsg_enum @compat(UInt32)
+typealias prj_errmsg_enum UInt32
 const PRJERR_SUCCESS = 0
 const PRJERR_NULL_POINTER = 1
 const PRJERR_BAD_PARAM = 2
@@ -254,10 +254,10 @@ const PRJERR_BAD_PIX = 3
 const PRJERR_BAD_WORLD = 4
 # end enum prj_errmsg_enum
 immutable Array_4_Uint8
-    d1::@compat(UInt8)
-    d2::@compat(UInt8)
-    d3::@compat(UInt8)
-    d4::@compat(UInt8)
+    d1::UInt8
+    d2::UInt8
+    d3::UInt8
+    d4::UInt8
 end
 immutable Array_30_Cdouble
     d1::Cdouble
@@ -292,46 +292,46 @@ immutable Array_30_Cdouble
     d30::Cdouble
 end
 immutable Array_40_Uint8
-    d1::@compat(UInt8)
-    d2::@compat(UInt8)
-    d3::@compat(UInt8)
-    d4::@compat(UInt8)
-    d5::@compat(UInt8)
-    d6::@compat(UInt8)
-    d7::@compat(UInt8)
-    d8::@compat(UInt8)
-    d9::@compat(UInt8)
-    d10::@compat(UInt8)
-    d11::@compat(UInt8)
-    d12::@compat(UInt8)
-    d13::@compat(UInt8)
-    d14::@compat(UInt8)
-    d15::@compat(UInt8)
-    d16::@compat(UInt8)
-    d17::@compat(UInt8)
-    d18::@compat(UInt8)
-    d19::@compat(UInt8)
-    d20::@compat(UInt8)
-    d21::@compat(UInt8)
-    d22::@compat(UInt8)
-    d23::@compat(UInt8)
-    d24::@compat(UInt8)
-    d25::@compat(UInt8)
-    d26::@compat(UInt8)
-    d27::@compat(UInt8)
-    d28::@compat(UInt8)
-    d29::@compat(UInt8)
-    d30::@compat(UInt8)
-    d31::@compat(UInt8)
-    d32::@compat(UInt8)
-    d33::@compat(UInt8)
-    d34::@compat(UInt8)
-    d35::@compat(UInt8)
-    d36::@compat(UInt8)
-    d37::@compat(UInt8)
-    d38::@compat(UInt8)
-    d39::@compat(UInt8)
-    d40::@compat(UInt8)
+    d1::UInt8
+    d2::UInt8
+    d3::UInt8
+    d4::UInt8
+    d5::UInt8
+    d6::UInt8
+    d7::UInt8
+    d8::UInt8
+    d9::UInt8
+    d10::UInt8
+    d11::UInt8
+    d12::UInt8
+    d13::UInt8
+    d14::UInt8
+    d15::UInt8
+    d16::UInt8
+    d17::UInt8
+    d18::UInt8
+    d19::UInt8
+    d20::UInt8
+    d21::UInt8
+    d22::UInt8
+    d23::UInt8
+    d24::UInt8
+    d25::UInt8
+    d26::UInt8
+    d27::UInt8
+    d28::UInt8
+    d29::UInt8
+    d30::UInt8
+    d31::UInt8
+    d32::UInt8
+    d33::UInt8
+    d34::UInt8
+    d35::UInt8
+    d36::UInt8
+    d37::UInt8
+    d38::UInt8
+    d39::UInt8
+    d40::UInt8
 end
 immutable Array_10_Cdouble
     d1::Cdouble
@@ -372,7 +372,7 @@ immutable prjprm
     prjs2x::Ptr{Void}
 end
 # begin enum cel_errmsg_enum
-typealias cel_errmsg_enum @compat(UInt32)
+typealias cel_errmsg_enum UInt32
 const CELERR_SUCCESS = 0
 const CELERR_NULL_POINTER = 1
 const CELERR_BAD_PARAM = 2
@@ -462,14 +462,14 @@ const SPCERR_BAD_X = 3
 const SPCERR_BAD_SPEC = 4
 # end enum spc_errmsg_enum
 immutable Array_8_Uint8
-    d1::@compat(UInt8)
-    d2::@compat(UInt8)
-    d3::@compat(UInt8)
-    d4::@compat(UInt8)
-    d5::@compat(UInt8)
-    d6::@compat(UInt8)
-    d7::@compat(UInt8)
-    d8::@compat(UInt8)
+    d1::UInt8
+    d2::UInt8
+    d3::UInt8
+    d4::UInt8
+    d5::UInt8
+    d6::UInt8
+    d7::UInt8
+    d8::UInt8
 end
 immutable Array_7_Cdouble
     d1::Cdouble
@@ -507,7 +507,7 @@ immutable spcprm
     spxP2X::Ptr{Void}
 end
 # begin enum tab_errmsg_enum
-typealias tab_errmsg_enum @compat(UInt32)
+typealias tab_errmsg_enum UInt32
 const TABERR_SUCCESS = 0
 const TABERR_NULL_POINTER = 1
 const TABERR_MEMORY = 2
@@ -542,7 +542,7 @@ immutable tabprm
     m_coord::Ptr{Cdouble}
 end
 # begin enum wcs_errmsg_enum
-typealias wcs_errmsg_enum @compat(UInt32)
+typealias wcs_errmsg_enum UInt32
 const WCSERR_SUCCESS = 0
 const WCSERR_NULL_POINTER = 1
 const WCSERR_MEMORY = 2
@@ -564,78 +564,78 @@ immutable pvcard
     value::Cdouble
 end
 immutable Array_72_Uint8
-    d1::@compat(UInt8)
-    d2::@compat(UInt8)
-    d3::@compat(UInt8)
-    d4::@compat(UInt8)
-    d5::@compat(UInt8)
-    d6::@compat(UInt8)
-    d7::@compat(UInt8)
-    d8::@compat(UInt8)
-    d9::@compat(UInt8)
-    d10::@compat(UInt8)
-    d11::@compat(UInt8)
-    d12::@compat(UInt8)
-    d13::@compat(UInt8)
-    d14::@compat(UInt8)
-    d15::@compat(UInt8)
-    d16::@compat(UInt8)
-    d17::@compat(UInt8)
-    d18::@compat(UInt8)
-    d19::@compat(UInt8)
-    d20::@compat(UInt8)
-    d21::@compat(UInt8)
-    d22::@compat(UInt8)
-    d23::@compat(UInt8)
-    d24::@compat(UInt8)
-    d25::@compat(UInt8)
-    d26::@compat(UInt8)
-    d27::@compat(UInt8)
-    d28::@compat(UInt8)
-    d29::@compat(UInt8)
-    d30::@compat(UInt8)
-    d31::@compat(UInt8)
-    d32::@compat(UInt8)
-    d33::@compat(UInt8)
-    d34::@compat(UInt8)
-    d35::@compat(UInt8)
-    d36::@compat(UInt8)
-    d37::@compat(UInt8)
-    d38::@compat(UInt8)
-    d39::@compat(UInt8)
-    d40::@compat(UInt8)
-    d41::@compat(UInt8)
-    d42::@compat(UInt8)
-    d43::@compat(UInt8)
-    d44::@compat(UInt8)
-    d45::@compat(UInt8)
-    d46::@compat(UInt8)
-    d47::@compat(UInt8)
-    d48::@compat(UInt8)
-    d49::@compat(UInt8)
-    d50::@compat(UInt8)
-    d51::@compat(UInt8)
-    d52::@compat(UInt8)
-    d53::@compat(UInt8)
-    d54::@compat(UInt8)
-    d55::@compat(UInt8)
-    d56::@compat(UInt8)
-    d57::@compat(UInt8)
-    d58::@compat(UInt8)
-    d59::@compat(UInt8)
-    d60::@compat(UInt8)
-    d61::@compat(UInt8)
-    d62::@compat(UInt8)
-    d63::@compat(UInt8)
-    d64::@compat(UInt8)
-    d65::@compat(UInt8)
-    d66::@compat(UInt8)
-    d67::@compat(UInt8)
-    d68::@compat(UInt8)
-    d69::@compat(UInt8)
-    d70::@compat(UInt8)
-    d71::@compat(UInt8)
-    d72::@compat(UInt8)
+    d1::UInt8
+    d2::UInt8
+    d3::UInt8
+    d4::UInt8
+    d5::UInt8
+    d6::UInt8
+    d7::UInt8
+    d8::UInt8
+    d9::UInt8
+    d10::UInt8
+    d11::UInt8
+    d12::UInt8
+    d13::UInt8
+    d14::UInt8
+    d15::UInt8
+    d16::UInt8
+    d17::UInt8
+    d18::UInt8
+    d19::UInt8
+    d20::UInt8
+    d21::UInt8
+    d22::UInt8
+    d23::UInt8
+    d24::UInt8
+    d25::UInt8
+    d26::UInt8
+    d27::UInt8
+    d28::UInt8
+    d29::UInt8
+    d30::UInt8
+    d31::UInt8
+    d32::UInt8
+    d33::UInt8
+    d34::UInt8
+    d35::UInt8
+    d36::UInt8
+    d37::UInt8
+    d38::UInt8
+    d39::UInt8
+    d40::UInt8
+    d41::UInt8
+    d42::UInt8
+    d43::UInt8
+    d44::UInt8
+    d45::UInt8
+    d46::UInt8
+    d47::UInt8
+    d48::UInt8
+    d49::UInt8
+    d50::UInt8
+    d51::UInt8
+    d52::UInt8
+    d53::UInt8
+    d54::UInt8
+    d55::UInt8
+    d56::UInt8
+    d57::UInt8
+    d58::UInt8
+    d59::UInt8
+    d60::UInt8
+    d61::UInt8
+    d62::UInt8
+    d63::UInt8
+    d64::UInt8
+    d65::UInt8
+    d66::UInt8
+    d67::UInt8
+    d68::UInt8
+    d69::UInt8
+    d70::UInt8
+    d71::UInt8
+    d72::UInt8
 end
 immutable pscard
     i::Cint
@@ -741,7 +741,7 @@ type wcsprm
     wcsprm() = new(-1)
 end
 # begin enum wcshdr_errmsg_enum
-typealias wcshdr_errmsg_enum @compat(UInt32)
+typealias wcshdr_errmsg_enum UInt32
 const WCSHDRERR_SUCCESS = 0
 const WCSHDRERR_NULL_POINTER = 1
 const WCSHDRERR_MEMORY = 2
