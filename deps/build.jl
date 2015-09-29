@@ -26,4 +26,4 @@ provides(BuildProcess,
           end),
          wcs)
 
-@BinDeps.install [:libwcs => :libwcs]
+@BinDeps.install @compat(Dict(:libwcs => :libwcs))
