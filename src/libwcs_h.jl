@@ -5,7 +5,7 @@ function wcserr_enable(enable::Integer)
     ccall((:wcserr_enable,libwcs),Cint,(Cint,),enable)
 end
 function wcserr_prt(err::Ptr{wcserr},prefix::ASCIIString)
-    ccall((:wcserr_prt,libwcs),Cint,(Ptr{wcserr},Ptr{Uint8}),err,prefix)
+    ccall((:wcserr_prt,libwcs),Cint,(Ptr{wcserr},Ptr{@compat(UInt8)}),err,prefix)
 end
 function wcserr_clear(err::Ptr{Ptr{wcserr}})
     ccall((:wcserr_clear,libwcs),Cint,(Ptr{Ptr{wcserr}},),err)
@@ -325,8 +325,8 @@ end
 function cels2x(cel::Ptr{celprm},nlng::Integer,nlat::Integer,sll::Integer,sxy::Integer,lng::Ptr{Cdouble},lat::Ptr{Cdouble},phi::Ptr{Cdouble},theta::Ptr{Cdouble},x::Ptr{Cdouble},y::Ptr{Cdouble},stat::Ptr{Cint})
     ccall((:cels2x,libwcs),Cint,(Ptr{celprm},Cint,Cint,Cint,Cint,Ptr{Cdouble},Ptr{Cdouble},Ptr{Cdouble},Ptr{Cdouble},Ptr{Cdouble},Ptr{Cdouble},Ptr{Cint}),cel,nlng,nlat,sll,sxy,lng,lat,phi,theta,x,y,stat)
 end
-function specx(_type::Ptr{Uint8},spec::Real,restfrq::Real,restwav::Real,specs::Ptr{spxprm})
-    ccall((:specx,libwcs),Cint,(Ptr{Uint8},Cdouble,Cdouble,Cdouble,Ptr{spxprm}),_type,spec,restfrq,restwav,specs)
+function specx(_type::Ptr{@compat(UInt8)},spec::Real,restfrq::Real,restwav::Real,specs::Ptr{spxprm})
+    ccall((:specx,libwcs),Cint,(Ptr{@compat(UInt8)},Cdouble,Cdouble,Cdouble,Ptr{spxprm}),_type,spec,restfrq,restwav,specs)
 end
 function freqafrq(param::Real,nspec::Integer,instep::Integer,outstep::Integer,inspec::Ptr{Cdouble},outspec::Ptr{Cdouble},stat::Ptr{Cint})
     ccall((:freqafrq,libwcs),Cint,(Cdouble,Cint,Cint,Cint,Ptr{Cdouble},Ptr{Cdouble},Ptr{Cint}),param,nspec,instep,outstep,inspec,outspec,stat)
@@ -424,32 +424,32 @@ end
 function spcs2x(spc::Ptr{spcprm},nspec::Integer,sspec::Integer,sx::Integer,spec::Ptr{Cdouble},x::Ptr{Cdouble},stat::Ptr{Cint})
     ccall((:spcs2x,libwcs),Cint,(Ptr{spcprm},Cint,Cint,Cint,Ptr{Cdouble},Ptr{Cdouble},Ptr{Cint}),spc,nspec,sspec,sx,spec,x,stat)
 end
-function spctype(ctype::Ptr{Uint8},stype::Ptr{Uint8},scode::Ptr{Uint8},sname::Ptr{Uint8},units::Ptr{Uint8},ptype::Ptr{Uint8},xtype::Ptr{Uint8},restreq::Ptr{Cint},err::Ptr{Ptr{wcserr}})
-    ccall((:spctype,libwcs),Cint,(Ptr{Uint8},Ptr{Uint8},Ptr{Uint8},Ptr{Uint8},Ptr{Uint8},Ptr{Uint8},Ptr{Uint8},Ptr{Cint},Ptr{Ptr{wcserr}}),ctype,stype,scode,sname,units,ptype,xtype,restreq,err)
+function spctype(ctype::Ptr{@compat(UInt8)},stype::Ptr{@compat(UInt8)},scode::Ptr{@compat(UInt8)},sname::Ptr{@compat(UInt8)},units::Ptr{@compat(UInt8)},ptype::Ptr{@compat(UInt8)},xtype::Ptr{@compat(UInt8)},restreq::Ptr{Cint},err::Ptr{Ptr{wcserr}})
+    ccall((:spctype,libwcs),Cint,(Ptr{@compat(UInt8)},Ptr{@compat(UInt8)},Ptr{@compat(UInt8)},Ptr{@compat(UInt8)},Ptr{@compat(UInt8)},Ptr{@compat(UInt8)},Ptr{@compat(UInt8)},Ptr{Cint},Ptr{Ptr{wcserr}}),ctype,stype,scode,sname,units,ptype,xtype,restreq,err)
 end
-function spcspxe(ctypeS::Ptr{Uint8},crvalS::Real,restfrq::Real,restwav::Real,ptype::Ptr{Uint8},xtype::Ptr{Uint8},restreq::Ptr{Cint},crvalX::Ptr{Cdouble},dXdS::Ptr{Cdouble},err::Ptr{Ptr{wcserr}})
-    ccall((:spcspxe,libwcs),Cint,(Ptr{Uint8},Cdouble,Cdouble,Cdouble,Ptr{Uint8},Ptr{Uint8},Ptr{Cint},Ptr{Cdouble},Ptr{Cdouble},Ptr{Ptr{wcserr}}),ctypeS,crvalS,restfrq,restwav,ptype,xtype,restreq,crvalX,dXdS,err)
+function spcspxe(ctypeS::Ptr{@compat(UInt8)},crvalS::Real,restfrq::Real,restwav::Real,ptype::Ptr{@compat(UInt8)},xtype::Ptr{@compat(UInt8)},restreq::Ptr{Cint},crvalX::Ptr{Cdouble},dXdS::Ptr{Cdouble},err::Ptr{Ptr{wcserr}})
+    ccall((:spcspxe,libwcs),Cint,(Ptr{@compat(UInt8)},Cdouble,Cdouble,Cdouble,Ptr{@compat(UInt8)},Ptr{@compat(UInt8)},Ptr{Cint},Ptr{Cdouble},Ptr{Cdouble},Ptr{Ptr{wcserr}}),ctypeS,crvalS,restfrq,restwav,ptype,xtype,restreq,crvalX,dXdS,err)
 end
-function spcxpse(ctypeS::Ptr{Uint8},crvalX::Real,restfrq::Real,restwav::Real,ptype::Ptr{Uint8},xtype::Ptr{Uint8},restreq::Ptr{Cint},crvalS::Ptr{Cdouble},dSdX::Ptr{Cdouble},err::Ptr{Ptr{wcserr}})
-    ccall((:spcxpse,libwcs),Cint,(Ptr{Uint8},Cdouble,Cdouble,Cdouble,Ptr{Uint8},Ptr{Uint8},Ptr{Cint},Ptr{Cdouble},Ptr{Cdouble},Ptr{Ptr{wcserr}}),ctypeS,crvalX,restfrq,restwav,ptype,xtype,restreq,crvalS,dSdX,err)
+function spcxpse(ctypeS::Ptr{@compat(UInt8)},crvalX::Real,restfrq::Real,restwav::Real,ptype::Ptr{@compat(UInt8)},xtype::Ptr{@compat(UInt8)},restreq::Ptr{Cint},crvalS::Ptr{Cdouble},dSdX::Ptr{Cdouble},err::Ptr{Ptr{wcserr}})
+    ccall((:spcxpse,libwcs),Cint,(Ptr{@compat(UInt8)},Cdouble,Cdouble,Cdouble,Ptr{@compat(UInt8)},Ptr{@compat(UInt8)},Ptr{Cint},Ptr{Cdouble},Ptr{Cdouble},Ptr{Ptr{wcserr}}),ctypeS,crvalX,restfrq,restwav,ptype,xtype,restreq,crvalS,dSdX,err)
 end
-function spctrne(ctypeS1::Ptr{Uint8},crvalS1::Real,cdeltS1::Real,restfrq::Real,restwav::Real,ctypeS2::Ptr{Uint8},crvalS2::Ptr{Cdouble},cdeltS2::Ptr{Cdouble},err::Ptr{Ptr{wcserr}})
-    ccall((:spctrne,libwcs),Cint,(Ptr{Uint8},Cdouble,Cdouble,Cdouble,Cdouble,Ptr{Uint8},Ptr{Cdouble},Ptr{Cdouble},Ptr{Ptr{wcserr}}),ctypeS1,crvalS1,cdeltS1,restfrq,restwav,ctypeS2,crvalS2,cdeltS2,err)
+function spctrne(ctypeS1::Ptr{@compat(UInt8)},crvalS1::Real,cdeltS1::Real,restfrq::Real,restwav::Real,ctypeS2::Ptr{@compat(UInt8)},crvalS2::Ptr{Cdouble},cdeltS2::Ptr{Cdouble},err::Ptr{Ptr{wcserr}})
+    ccall((:spctrne,libwcs),Cint,(Ptr{@compat(UInt8)},Cdouble,Cdouble,Cdouble,Cdouble,Ptr{@compat(UInt8)},Ptr{Cdouble},Ptr{Cdouble},Ptr{Ptr{wcserr}}),ctypeS1,crvalS1,cdeltS1,restfrq,restwav,ctypeS2,crvalS2,cdeltS2,err)
 end
-function spcaips(ctypeA::Ptr{Uint8},velref::Integer,ctype::Ptr{Uint8},specsys::Ptr{Uint8})
-    ccall((:spcaips,libwcs),Cint,(Ptr{Uint8},Cint,Ptr{Uint8},Ptr{Uint8}),ctypeA,velref,ctype,specsys)
+function spcaips(ctypeA::Ptr{@compat(UInt8)},velref::Integer,ctype::Ptr{@compat(UInt8)},specsys::Ptr{@compat(UInt8)})
+    ccall((:spcaips,libwcs),Cint,(Ptr{@compat(UInt8)},Cint,Ptr{@compat(UInt8)},Ptr{@compat(UInt8)}),ctypeA,velref,ctype,specsys)
 end
-function spctyp(ctype::Ptr{Uint8},stype::Ptr{Uint8},scode::Ptr{Uint8},sname::Ptr{Uint8},units::Ptr{Uint8},ptype::Ptr{Uint8},xtype::Ptr{Uint8},restreq::Ptr{Cint})
-    ccall((:spctyp,libwcs),Cint,(Ptr{Uint8},Ptr{Uint8},Ptr{Uint8},Ptr{Uint8},Ptr{Uint8},Ptr{Uint8},Ptr{Uint8},Ptr{Cint}),ctype,stype,scode,sname,units,ptype,xtype,restreq)
+function spctyp(ctype::Ptr{@compat(UInt8)},stype::Ptr{@compat(UInt8)},scode::Ptr{@compat(UInt8)},sname::Ptr{@compat(UInt8)},units::Ptr{@compat(UInt8)},ptype::Ptr{@compat(UInt8)},xtype::Ptr{@compat(UInt8)},restreq::Ptr{Cint})
+    ccall((:spctyp,libwcs),Cint,(Ptr{@compat(UInt8)},Ptr{@compat(UInt8)},Ptr{@compat(UInt8)},Ptr{@compat(UInt8)},Ptr{@compat(UInt8)},Ptr{@compat(UInt8)},Ptr{@compat(UInt8)},Ptr{Cint}),ctype,stype,scode,sname,units,ptype,xtype,restreq)
 end
-function spcspx(ctypeS::Ptr{Uint8},crvalS::Real,restfrq::Real,restwav::Real,ptype::Ptr{Uint8},xtype::Ptr{Uint8},restreq::Ptr{Cint},crvalX::Ptr{Cdouble},dXdS::Ptr{Cdouble})
-    ccall((:spcspx,libwcs),Cint,(Ptr{Uint8},Cdouble,Cdouble,Cdouble,Ptr{Uint8},Ptr{Uint8},Ptr{Cint},Ptr{Cdouble},Ptr{Cdouble}),ctypeS,crvalS,restfrq,restwav,ptype,xtype,restreq,crvalX,dXdS)
+function spcspx(ctypeS::Ptr{@compat(UInt8)},crvalS::Real,restfrq::Real,restwav::Real,ptype::Ptr{@compat(UInt8)},xtype::Ptr{@compat(UInt8)},restreq::Ptr{Cint},crvalX::Ptr{Cdouble},dXdS::Ptr{Cdouble})
+    ccall((:spcspx,libwcs),Cint,(Ptr{@compat(UInt8)},Cdouble,Cdouble,Cdouble,Ptr{@compat(UInt8)},Ptr{@compat(UInt8)},Ptr{Cint},Ptr{Cdouble},Ptr{Cdouble}),ctypeS,crvalS,restfrq,restwav,ptype,xtype,restreq,crvalX,dXdS)
 end
-function spcxps(ctypeS::Ptr{Uint8},crvalX::Real,restfrq::Real,restwav::Real,ptype::Ptr{Uint8},xtype::Ptr{Uint8},restreq::Ptr{Cint},crvalS::Ptr{Cdouble},dSdX::Ptr{Cdouble})
-    ccall((:spcxps,libwcs),Cint,(Ptr{Uint8},Cdouble,Cdouble,Cdouble,Ptr{Uint8},Ptr{Uint8},Ptr{Cint},Ptr{Cdouble},Ptr{Cdouble}),ctypeS,crvalX,restfrq,restwav,ptype,xtype,restreq,crvalS,dSdX)
+function spcxps(ctypeS::Ptr{@compat(UInt8)},crvalX::Real,restfrq::Real,restwav::Real,ptype::Ptr{@compat(UInt8)},xtype::Ptr{@compat(UInt8)},restreq::Ptr{Cint},crvalS::Ptr{Cdouble},dSdX::Ptr{Cdouble})
+    ccall((:spcxps,libwcs),Cint,(Ptr{@compat(UInt8)},Cdouble,Cdouble,Cdouble,Ptr{@compat(UInt8)},Ptr{@compat(UInt8)},Ptr{Cint},Ptr{Cdouble},Ptr{Cdouble}),ctypeS,crvalX,restfrq,restwav,ptype,xtype,restreq,crvalS,dSdX)
 end
-function spctrn(ctypeS1::Ptr{Uint8},crvalS1::Real,cdeltS1::Real,restfrq::Real,restwav::Real,ctypeS2::Ptr{Uint8},crvalS2::Ptr{Cdouble},cdeltS2::Ptr{Cdouble})
-    ccall((:spctrn,libwcs),Cint,(Ptr{Uint8},Cdouble,Cdouble,Cdouble,Cdouble,Ptr{Uint8},Ptr{Cdouble},Ptr{Cdouble}),ctypeS1,crvalS1,cdeltS1,restfrq,restwav,ctypeS2,crvalS2,cdeltS2)
+function spctrn(ctypeS1::Ptr{@compat(UInt8)},crvalS1::Real,cdeltS1::Real,restfrq::Real,restwav::Real,ctypeS2::Ptr{@compat(UInt8)},crvalS2::Ptr{Cdouble},cdeltS2::Ptr{Cdouble})
+    ccall((:spctrn,libwcs),Cint,(Ptr{@compat(UInt8)},Cdouble,Cdouble,Cdouble,Cdouble,Ptr{@compat(UInt8)},Ptr{Cdouble},Ptr{Cdouble}),ctypeS1,crvalS1,cdeltS1,restfrq,restwav,ctypeS2,crvalS2,cdeltS2)
 end
 function tabini(alloc::Integer,M::Integer,K::Ptr{Cint},tab::Ptr{tabprm})
     ccall((:tabini,libwcs),Cint,(Cint,Cint,Ptr{Cint},Ptr{tabprm}),alloc,M,K,tab)
@@ -494,7 +494,7 @@ function wcsprt(wcs::wcsprm)
     ccall((:wcsprt,libwcs),Cint,(Ptr{wcsprm},),&wcs)
 end
 function wcsperr(wcs::wcsprm,prefix::ASCIIString)
-    ccall((:wcsperr,libwcs),Cint,(Ptr{wcsprm},Ptr{Uint8}),&wcs,prefix)
+    ccall((:wcsperr,libwcs),Cint,(Ptr{wcsprm},Ptr{@compat(UInt8)}),&wcs,prefix)
 end
 function wcsbchk(wcs::wcsprm,bounds::Integer)
     ccall((:wcsbchk,libwcs),Cint,(Ptr{wcsprm},Cint),&wcs,bounds)
@@ -511,14 +511,14 @@ end
 function wcsmix(wcs::wcsprm,mixpix::Integer,mixcel::Integer,vspan::Ptr{Cdouble},vstep::Real,viter::Integer,world::Ptr{Cdouble},phi::Ptr{Cdouble},theta::Ptr{Cdouble},imgcrd::Ptr{Cdouble},pixcrd::Ptr{Cdouble})
     ccall((:wcsmix,libwcs),Cint,(Ptr{wcsprm},Cint,Cint,Ptr{Cdouble},Cdouble,Cint,Ptr{Cdouble},Ptr{Cdouble},Ptr{Cdouble},Ptr{Cdouble},Ptr{Cdouble}),&wcs,mixpix,mixcel,vspan,vstep,viter,world,phi,theta,imgcrd,pixcrd)
 end
-function wcssptr(wcs::wcsprm,i::Ptr{Cint},ctype::Ptr{Uint8})
-    ccall((:wcssptr,libwcs),Cint,(Ptr{wcsprm},Ptr{Cint},Ptr{Uint8}),&wcs,i,ctype)
+function wcssptr(wcs::wcsprm,i::Ptr{Cint},ctype::Ptr{@compat(UInt8)})
+    ccall((:wcssptr,libwcs),Cint,(Ptr{wcsprm},Ptr{Cint},Ptr{@compat(UInt8)}),&wcs,i,ctype)
 end
-function wcspih(header::Ptr{Uint8},nkeyrec::Integer,relax::Integer,ctrl::Integer,nreject::Ptr{Cint},nwcs::Ptr{Cint},wcs::Ptr{Ptr{wcsprm}})
-    ccall((:wcspih,libwcs),Cint,(Ptr{Uint8},Cint,Cint,Cint,Ptr{Cint},Ptr{Cint},Ptr{Ptr{wcsprm}}),header,nkeyrec,relax,ctrl,nreject,nwcs,wcs)
+function wcspih(header::Ptr{@compat(UInt8)},nkeyrec::Integer,relax::Integer,ctrl::Integer,nreject::Ptr{Cint},nwcs::Ptr{Cint},wcs::Ptr{Ptr{wcsprm}})
+    ccall((:wcspih,libwcs),Cint,(Ptr{@compat(UInt8)},Cint,Cint,Cint,Ptr{Cint},Ptr{Cint},Ptr{Ptr{wcsprm}}),header,nkeyrec,relax,ctrl,nreject,nwcs,wcs)
 end
-function wcsbth(header::Ptr{Uint8},nkeyrec::Integer,relax::Integer,ctrl::Integer,keysel::Integer,colsel::Ptr{Cint},nreject::Ptr{Cint},nwcs::Ptr{Cint},wcs::Ptr{Ptr{wcsprm}})
-    ccall((:wcsbth,libwcs),Cint,(Ptr{Uint8},Cint,Cint,Cint,Cint,Ptr{Cint},Ptr{Cint},Ptr{Cint},Ptr{Ptr{wcsprm}}),header,nkeyrec,relax,ctrl,keysel,colsel,nreject,nwcs,wcs)
+function wcsbth(header::Ptr{@compat(UInt8)},nkeyrec::Integer,relax::Integer,ctrl::Integer,keysel::Integer,colsel::Ptr{Cint},nreject::Ptr{Cint},nwcs::Ptr{Cint},wcs::Ptr{Ptr{wcsprm}})
+    ccall((:wcsbth,libwcs),Cint,(Ptr{@compat(UInt8)},Cint,Cint,Cint,Cint,Ptr{Cint},Ptr{Cint},Ptr{Cint},Ptr{Ptr{wcsprm}}),header,nkeyrec,relax,ctrl,keysel,colsel,nreject,nwcs,wcs)
 end
 function wcstab(wcs::wcsprm)
     ccall((:wcstab,libwcs),Cint,(Ptr{wcsprm},),&wcs)
@@ -532,7 +532,7 @@ end
 function wcsvfree(nwcs::Ptr{Cint},wcs::Ptr{Ptr{wcsprm}})
     ccall((:wcsvfree,libwcs),Cint,(Ptr{Cint},Ptr{Ptr{wcsprm}}),nwcs,wcs)
 end
-function wcshdo(relax::Integer,wcs::wcsprm,nkeyrec::Ptr{Cint},header::Ptr{Ptr{Uint8}})
-    ccall((:wcshdo,libwcs),Cint,(Cint,Ptr{wcsprm},Ptr{Cint},Ptr{Ptr{Uint8}}),relax,&wcs,nkeyrec,header)
+function wcshdo(relax::Integer,wcs::wcsprm,nkeyrec::Ptr{Cint},header::Ptr{Ptr{@compat(UInt8)}})
+    ccall((:wcshdo,libwcs),Cint,(Cint,Ptr{wcsprm},Ptr{Cint},Ptr{Ptr{@compat(UInt8)}}),relax,&wcs,nkeyrec,header)
 end
 

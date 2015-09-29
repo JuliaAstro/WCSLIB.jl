@@ -29,7 +29,7 @@ function func_rewriter(e::Expr)
             a.args[2] = :Real
         elseif a.args[2] == :(Ptr{wcsprm})
             a.args[2] = :wcsprm
-        elseif a.args[2] == :(Ptr{Uint8})
+        elseif a.args[2] == :(Ptr{@compat(UInt8)})
             if ismatch(r_ascii, s)
                 a.args[2] = :ASCIIString
             end
