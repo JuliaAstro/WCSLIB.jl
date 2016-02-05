@@ -1,7 +1,10 @@
 WCSLIB.jl
 =========
 
-Julia wrapper for [wcslib](http://www.atnf.csiro.au/people/mcalabre/WCS/). 
+**WCSLIB.jl is deprecated. Use [WCS.jl](http://github.com/JuliaAstro/WCS.jl)
+instead.**
+
+Julia wrapper for [wcslib](http://www.atnf.csiro.au/people/mcalabre/WCS/).
 
 Installation
 ------------
